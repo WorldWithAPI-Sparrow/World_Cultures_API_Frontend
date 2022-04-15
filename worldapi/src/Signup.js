@@ -5,6 +5,7 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [redirectMsg, setRedirectMsg] = useState("");
   const navigate = useNavigate();
 
   const handleSignUp = (e) => {
@@ -20,8 +21,12 @@ const Signup = () => {
     }).then(res => res.json())
     .then(data => console.log(data))
 
-    setMessage(`Howdy! ¡Hola! Bonjour! Bonjour! Konnichiwa! Guten Tag! Asalaam alaikum! Asalaam alaikum! Shalom!!! Welcome to the World of Cultures API ${name}`)
-    navigate('/login');
+    setMessage(`Howdy! ¡Hola! Bonjour! Bonjour! Konnichiwa! Guten Tag! Asalaam alaikum! Asalaam alaikum! Shalom!!! 
+    Welcome to the World of Cultures API ${name}`)
+    setRedirectMsg('You will be redirected into Signin in a momment')
+    setTimeout(() => {
+      navigate('/login');
+    }, 5000)
   };
 
 
@@ -62,15 +67,16 @@ const Signup = () => {
             onClick={handleSignUp}
             className="w-100 btn btn-lg"
             type="submit"
-            style={{backgroundColor: "teal", color: "white", marginTop:"50px"}}
+            style={{backgroundColor: "teal", color: "white", marginTop:"50px", borderRadius:"5px", padding:"10px 10px"}}
           >
             Sign up
           </button>
         </form>
         <br></br>
-        <p style={{textAlign: "center", color:'white'}}>Already an user? Please <Link style={{textAlign: "center", color:'white', fontSize:'1.25em'}} to="/login">Login</Link></p>
+        <p style={{textAlign: "center", color:'white'}}>Already an user? Please <Link style={{textAlign: "center", color:'white', fontSize:'1.25em'}} to="/login">Signin</Link></p>
         
-        <p style={{textAlign: "center"}}>{message}</p>
+        {message && <p style={{color:'white', fontSize:'1.75em', inlineSize: '900px', overflow: 'hidden',marginLeft:'auto', marginRight:'auto'}}><br/>  Welcome to the World of Cultures API <span style={{fontSize: '1.5em'}}>{name}</span></p>}
+        {redirectMsg && <p style={{color:'white', fontSize:'1em', inlineSize: '900px', overflow: 'hidden',marginLeft:'auto', marginRight:'auto'}}>{redirectMsg}</p>}
         
        
     </div>

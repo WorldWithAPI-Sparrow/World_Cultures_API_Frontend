@@ -15,7 +15,7 @@ function App({  }) {
     backgroundRepeat: 'no-repeat',
     height: "1400px"
   }}>
-  {/* style={{backgroundImage:`url(${Background})`,  overflow: 'hidden',height: "1400px"}} */}
+ 
        <Routes>
           <Route path='/' element={<Signup/>}/>
           <Route path='/Login' element={<Login/>}/>
