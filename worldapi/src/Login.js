@@ -27,7 +27,7 @@ const Login = () => {
     setRedirectMsg('You will be redirected into the API Documentation within a momment')
     setTimeout(() => {
       window.location.href = "https://docs.google.com/document/d/1d3fHN-HYUSAlaJiwUd6g12QmOlPsJo_U4eRrnuBuioo/edit#heading=h.wcqtdtufkwqs";
-    }, 4000)
+    }, 5000)
   };
 
   return (

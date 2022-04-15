@@ -34,6 +34,7 @@ const Signup = () => {
     <main>
     <div >
         <form action="/signup" method="post">
+        <h1 style={{textAlign: "center", fontSize:"3em", color:'white', paddingTop: 90}}>The World Culture API</h1>
           <h1 style={{textAlign: "center", color:'white', paddingTop: 90}}>Create Your Account</h1>
           <div>
             <input style={{width:"300px", marginBottom: "5px", marginTop: "15px"}}

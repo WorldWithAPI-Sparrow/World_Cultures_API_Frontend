@@ -6,8 +6,8 @@ import Signup from './Signup';
 import Background from './Img/Background.gif';
 import './App.css';
 
-function App({  }) {
- 
+function App() {
+  
   return (
     <div className="App" style = {{ backgroundImage: `url(${Background})`,
     backgroundSize: 'cover', 
@@ -15,7 +15,7 @@ function App({  }) {
     backgroundRepeat: 'no-repeat',
     height: "1400px"
   }}>
- 
+     
        <Routes>
           <Route path='/' element={<Signup/>}/>
           <Route path='/Login' element={<Login/>}/>
