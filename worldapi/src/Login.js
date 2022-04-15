@@ -20,7 +20,7 @@ const Login = () => {
       })
     }).then(res => res.json())
     .then(data => console.log(data))
-    setMessage(`Success! Welcome Back ${name}!`)
+    setMessage(`Welcom back ${name}`)
   };
 
   return (
@@ -61,7 +61,7 @@ const Login = () => {
             onClick={handleLogIn}
             className="w-100 btn btn-lg "
             type="submit"
-            style={{backgroundColor: "teal", color: "white", marginTop:"50px"}}
+            style={{backgroundColor: "teal", color: "white", marginTop:"50px", borderRadius:"5px", padding:"20px 20px"}}
           >
             Sign in
           </button>
@@ -69,7 +69,7 @@ const Login = () => {
         <br></br>
         <p style={{textAlign: "center", color:'white'}}>New here? Please <Link style={{textAlign: "center", color:'white', fontSize:'1.25em'}} to="/">Signup</Link></p>
         <UserLogIn.Provider value={message}>
-        <p>{message}</p>
+        <p style={{color:'white', fontSize:'2em', inlineSize: '900px', overflow: 'hidden',marginLeft:'auto', marginRight:'auto'}}>{message}</p>
         </UserLogIn.Provider>
     </div>
     </main>

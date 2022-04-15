@@ -20,7 +20,7 @@ const Signup = () => {
     }).then(res => res.json())
     .then(data => console.log(data))
 
-    setMessage(`Success! Welcome ${name}!`)
+    setMessage(`Howdy! ¡Hola! Bonjour! Bonjour! Konnichiwa! Guten Tag! Asalaam alaikum! Asalaam alaikum! Shalom!!! Welcome to the World of Cultures API ${name}`)
     navigate('/login');
   };
 
@@ -69,7 +69,10 @@ const Signup = () => {
         </form>
         <br></br>
         <p style={{textAlign: "center", color:'white'}}>Already an user? Please <Link style={{textAlign: "center", color:'white', fontSize:'1.25em'}} to="/login">Login</Link></p>
-       <p style={{textAlign: "center"}}>{message}</p>
+        
+        <p style={{textAlign: "center"}}>{message}</p>
+        
+       
     </div>
     </main>
   );
